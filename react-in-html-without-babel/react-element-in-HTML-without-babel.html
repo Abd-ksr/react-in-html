@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+  <title>React Code in HTML - Without Babel and Jsx</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <!--Add React core library via CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <!--Add ReactDOM  library via CDN -->
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  
+  <script>
+    // Define a React element without jsx
+    const headerElement = React.createElement(
+      'h1',
+      { className: 'welcome' },
+      'Welcome - React Element in HTML Without babel'
+    );
+
+    // Render the element to the DOM
+    const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+    reactRoot.render(headerElement);
+  </script>
+
+</body>
+
+</html>
